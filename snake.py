@@ -14,7 +14,11 @@ while continuer :
         if event.type == pg.KEYDOWN:
             if event.key == pg.K_q:
                 continuer = False
-    random_color = (randint(0, 255), randint(0, 255), randint(0, 255))
-    screen.fill(random_color)
+    screen.fill((0,0,0))
+    x, y = 100, 200            # coin supérieur gauche, en pixels
+    width, height = 20, 20     # largeur et hauteur, en pixels
+    color = (255, 0, 0)        # rouge, en (R, V, B)
+    rect = pg.Rect(x, y, width, height)
+    pg.draw.rect(screen, color, rect)   
     pg.display.update()
 pg.quit()
